@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10101b">
+<title>نوای عاشقی | مرتضی بیرنژاد</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+:root{--bg:#10101b;--gold:#e7bd72;--muted:#a6a3b5;--line:#ffffff12}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#f7f3eb;font-family:Vazirmatn,Tahoma,sans-serif;padding-bottom:120px}
+.topbar{height:76px;max-width:1100px;margin:auto;padding:0 22px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{width:43px;height:43px;border:1px solid #e7bd7270;border-radius:14px;display:grid;place-items:center;color:var(--gold);font-size:25px}
+.brand b,.brand small{display:block}.brand small{font-size:10px;color:var(--muted)}.top-tag{font-size:12px;color:var(--gold);border:1px solid #e7bd7238;padding:7px 13px;border-radius:30px}
+.hero{max-width:1100px;min-height:330px;margin:18px auto 60px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(115deg,#211e32,#171725 65%,#292039);padding:55px 7%;display:flex;align-items:center;justify-content:space-between;overflow:hidden}
+.eyebrow{color:var(--gold);font-size:12px}h1{font-size:clamp(34px,5vw,55px);line-height:1.5;margin:12px 0}h1 em{font-style:normal;color:var(--gold)}.hero p{color:#b9b5c4;line-height:2;font-size:14px}
+.hero-btn{display:inline-block;margin-top:14px;background:var(--gold);color:#211a13;text-decoration:none;padding:12px 20px;border-radius:12px;font-weight:800;font-size:13px}
+.disc{width:180px;height:180px;flex:none;border-radius:50%;background:repeating-radial-gradient(circle,#282637 0 3px,#393448 4px 5px);border:1px solid #e7bd7270;display:grid;place-items:center;box-shadow:0 20px 70px #0008;margin:0 35px}.disc span{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#f1d69d,#a97837);display:grid;place-items:center;color:#352716;font-size:30px}
+.collection{max-width:950px;margin:auto;padding:0 22px}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:20px}.section-head h2{font-size:26px;margin:5px 0}.count{color:var(--gold);font-size:12px}
+.category-card{width:100%;display:flex;align-items:center;text-align:right;gap:16px;padding:19px;background:linear-gradient(110deg,#28233a,#1b1a29);border:1px solid #e7bd7245;border-radius:17px;color:white;font-family:inherit}
+.category-icon,.cover{width:48px;height:48px;border-radius:14px;background:#e7bd7218;color:var(--gold);display:grid;place-items:center;font-size:25px}.category-info{flex:1}.category-info b,.category-info small{display:block}.category-info small{color:var(--muted);font-size:11px;margin-top:4px}.arrow{color:var(--gold);font-size:22px}
+.track-area{margin-top:28px}.track-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px}.track-heading h3{font-size:17px;margin:0}.track-heading span{font-size:11px;color:var(--muted)}
+.track-list{display:grid;gap:9px}.track{display:flex;align-items:center;gap:13px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#171724;cursor:pointer}.track.active,.track:hover{background:#242236;border-color:#e7bd7255}.num{width:28px;text-align:center;color:#aaa;font-size:12px}.cover{width:40px;height:40px}.track-name{flex:1;min-width:0;font-size:13px;font-weight:600;overflow-wrap:anywhere}.track-play{width:34px;height:34px;border-radius:50%;border:1px solid #e7bd7260;background:#e7bd7215;color:var(--gold);cursor:pointer}
+footer{text-align:center;margin:60px auto 20px;padding:0 18px;color:var(--muted);font-size:12px}footer b{color:var(--gold);font-size:17px}
+.player{position:fixed;z-index:5;bottom:0;left:0;right:0;background:#171724f5;backdrop-filter:blur(16px);border-top:1px solid #e7bd7230;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:12px max(20px,calc((100vw - 1050px)/2))}
+.player-track{display:flex;align-items:center;gap:10px;min-width:0}.mini{width:40px;height:40px;border-radius:12px;background:#30283a;color:var(--gold);display:grid;place-items:center;font-size:22px}.now{min-width:0}.now b,.now small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.now b{font-size:12px}.now small{font-size:10px;color:var(--muted);margin-top:3px}
+.controls{display:flex;align-items:center;gap:12px}.controls button{background:none;border:0;color:#eee;font-size:17px;cursor:pointer}.controls .main-play{width:39px;height:39px;border-radius:50%;background:var(--gold);color:#211a13}
+.timeline{display:flex;align-items:center;gap:8px;direction:ltr;color:#aaa;font-size:10px}.timeline input{width:100%;accent-color:var(--gold)}
+@media(max-width:700px){.hero{margin:12px 14px 42px;min-height:300px;padding:35px 24px}.disc{position:absolute;left:-55px;opacity:.18}.hero>div:first-child{position:relative;z-index:1}.collection{padding:0 15px}.player{grid-template-columns:1fr auto;gap:8px;padding:9px 12px}.timeline{grid-column:1/-1;grid-row:2}.track-heading{align-items:flex-start;gap:6px;flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">♪</span><span><b>نوای عاشقی</b><small>آوای دل، آرامش جان</small></span></a><span class="top-tag">آرشیو صوتی</span></header>
+<main>
+<section class="hero"><div><span class="eyebrow">آرشیو اختصاصی مداحی</span><h1>صدای عشق،<br><em>ماندگار در دل‌ها</em></h1><p>مجموعه آثار صوتی مرتضی بیرنژاد</p><a href="#collection" class="hero-btn">مشاهده مجموعه ↓</a></div><div class="disc"><span>♪</span></div></section>
+<section id="collection" class="collection"><div class="section-head"><div><span class="eyebrow">مجموعه‌ها</span><h2>آرشیو مداحی</h2></div><span class="count" id="trackCount"></span></div>
+<div class="category-card"><span class="category-icon">♫</span><span class="category-info"><b>مرتضی بیرنژاد</b><small>مجموعه آثار صوتی</small></span><span class="arrow">←</span></div>
+<div class="track-area"><div class="track-heading"><h3>آثار مرتضی بیرنژاد</h3><span>برای پخش، یک اثر را انتخاب کنید</span></div><div class="track-list" id="trackList"></div></div></section>
+</main>
+<footer><b>نوای عاشقی ✦</b><p>آرشیوی برای شنیدن نواهای دلنشین</p></footer>
+<div class="player"><div class="player-track"><div class="mini">♪</div><div class="now"><b id="nowTitle">یک مداحی انتخاب کنید</b><small>مرتضی بیرنژاد</small></div></div><div class="controls"><button id="prev" aria-label="قبلی">⏮</button><button id="playPause" class="main-play" aria-label="پخش">▶</button><button id="next" aria-label="بعدی">⏭</button></div><div class="timeline"><span id="currentTime">۰:۰۰</span><input id="seek" type="range" min="0" max="100" value="0"><span id="duration">۰:۰۰</span></div></div>
+<audio id="audio" preload="metadata"></audio>
+<script>
+'use strict';
+const TRACKS=[{"title": "333محزون", "file": "audio/track-01.mp3"}, {"title": "ازماتم جان فشان", "file": "audio/track-02.mp3"}, {"title": "ام لیلا غم دارو دل غمین است", "file": "audio/track-03.mp3"}, {"title": "ای شر ح سوره ی انعام", "file": "audio/track-04.mp3"}, {"title": "ببر سلام مرا فطرسا", "file": "audio/track-05.mp3"}, {"title": "در اوج تشویش جهان", "file": "audio/track-06.mp3"}, {"title": "شور اله ملبس علمدار خوش دست مرتضی یبرنژاد", "file": "audio/track-07.mp3"}, {"title": "شور-فراتر از باورمه مقامت", "file": "audio/track-08.mp3"}, {"title": "مرتضی یبرنژادماه دل، اباعبدالله دل", "file": "audio/track-09.mp3"}, {"title": "نماهنگ دلبر ابرو کمانمرتضی یبرنژاد", "file": "audio/track-10.mp3"}];
+const audio=document.getElementById('audio');
+const list=document.getElementById('trackList');
+const playBtn=document.getElementById('playPause');
+const seek=document.getElementById('seek');
+let current=-1;
+const fa=n=>{if(!Number.isFinite(n))return '۰:۰۰';const m=Math.floor(n/60),s=Math.floor(n%60);return `${m}:${String(s).padStart(2,'0')}`.replace(/[0-9]/g,d=>'۰۱۲۳۴۵۶۷۸۹'[+d]);};
+function showError(msg){document.getElementById('nowTitle').textContent=msg;playBtn.textContent='▶';}
+TRACKS.forEach((t,i)=>{
+ const el=document.createElement('div');el.className='track';
+ const num=document.createElement('span');num.className='num';num.textContent=String(i+1).replace(/[0-9]/g,d=>'۰۱۲۳۴۵۶۷۸۹'[+d]);
+ const cover=document.createElement('span');cover.className='cover';cover.textContent='♪';
+ const name=document.createElement('span');name.className='track-name';name.textContent=t.title;
+ const btn=document.createElement('button');btn.className='track-play';btn.type='button';btn.textContent='▶';btn.setAttribute('aria-label','پخش');
+ el.append(num,cover,name,btn);el.addEventListener('click',()=>load(i,true));list.appendChild(el);
+});
+document.getElementById('trackCount').textContent=TRACKS.length.toLocaleString('fa-IR')+' اثر صوتی';
+function load(i,autoplay){
+ if(i<0||i>=TRACKS.length)return;
+ current=i;audio.pause();audio.src=TRACKS[i].file;audio.load();
+ document.getElementById('nowTitle').textContent=TRACKS[i].title;
+ document.querySelectorAll('.track').forEach((e,j)=>{e.classList.toggle('active',j===i);e.querySelector('button').textContent=j===i?'♫':'▶';});
+ if(autoplay){const p=audio.play();if(p&&p.catch)p.catch(()=>showError('پخش انجام نشد؛ فایل‌ها را همراه index.html آپلود کنید'));}else playBtn.textContent='▶';
+}
+playBtn.addEventListener('click',()=>{if(current<0){load(0,true);return;}if(audio.paused){audio.play().then(()=>playBtn.textContent='Ⅱ').catch(()=>showError('فایل صوتی در دسترس نیست'));}else{audio.pause();playBtn.textContent='▶';}});
+document.getElementById('prev').addEventListener('click',()=>load((current<=0?TRACKS.length-1:current-1),true));
+document.getElementById('next').addEventListener('click',()=>load((current+1)%TRACKS.length,true));
+audio.addEventListener('play',()=>playBtn.textContent='Ⅱ');audio.addEventListener('pause',()=>playBtn.textContent='▶');
+audio.addEventListener('error',()=>showError('خطا در خواندن فایل صوتی؛ پوشه audio را بررسی کنید'));
+audio.addEventListener('timeupdate',()=>{if(audio.duration){seek.value=audio.currentTime/audio.duration*100;document.getElementById('currentTime').textContent=fa(audio.currentTime);document.getElementById('duration').textContent=fa(audio.duration);}});
+seek.addEventListener('input',()=>{if(audio.duration)audio.currentTime=seek.value/100*audio.duration;});
+audio.addEventListener('ended',()=>{if(current<TRACKS.length-1)load(current+1,true);else playBtn.textContent='▶';});
+</script>
+</body></html>
